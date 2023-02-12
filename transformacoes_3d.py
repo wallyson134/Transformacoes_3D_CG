@@ -60,14 +60,27 @@ def main():
                 if event.key == K_DOWN:
                     glTranslatef(0, -0.5, 0)
                 if event.key == K_a:
-                    glRotatef(1, 1, 0, 0)
-                if event.key == K_d:
-                    glRotatef(-1, 1, 0, 0)
+                    glRotatef(-5, 0, 5, 0)
+                
+                # girar cubo pra cima
                 if event.key == K_w:
-                    glScalef(1.1, 1.1, 1.1)
+                    glRotatef(-5, 5, 0, 0)
+                    
+                # girar cubo pra baixo
                 if event.key == K_s:
+                    glRotatef(5, 5, 0, 0)
+                
+                # girar cubo pra direita
+                if event.key == K_d:
+                    glRotatef(5, 0, 5, 0)
+                
+                if event.key == K_e:
+                    glScalef(1.1, 1.1, 1.1)
+                if event.key == K_q:
                     glScalef(0.9, 0.9, 0.9)
-
+                if event.key == K_j:
+                    glTranslatef(-0.5, 0, 0)
+                    glRotatef(20, 50, 20, 0)
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
         draw_cube()
         pygame.display.flip()
